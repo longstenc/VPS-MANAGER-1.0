@@ -38,7 +38,7 @@ criarssh30() {
     tempo='31'
     final=$(date "+%Y-%m-%d" -d "+$tempo days")
     gui=$(date "+%d/%m/%Y" -d "+$tempo days")
-    pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+    pass=$(perl -e 'print crypt($ARGV[0], "password")' $senha)
     
   if [[ "$(grep -wc $usuario /etc/passwd)" != '0' ]]; then
       ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
@@ -68,7 +68,7 @@ criarssh15() {
     tempo='16'
     final=$(date "+%Y-%m-%d" -d "+$tempo days")
     gui=$(date "+%d/%m/%Y" -d "+$tempo days")
-    pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+    pass=$(perl -e 'print crypt($ARGV[0], "password")' $senha)
     
   if [[ "$(grep -wc $usuario /etc/passwd)" != '0' ]]; then
       ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
