@@ -13,3 +13,17 @@ __Instalar apenas o SCRIPT__
 __Instalar o SCRIPT e atualizar pacotes do sistema__
 
 ```apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/Plus; chmod 777 Plus;./Plus```
+
+__Alterar senha Root__
+
+```sudo -i```
+
+```bash <(wget -qO- https://raw.githubusercontent.com/NT-GIT-HUB/VPS-MANAGER-1.0/main/senharoot.sh)```
+
+__Abrir Portas Servidor Oracle__
+
+```sudo apt-get update```
+```sudo apt install firewalld```
+```sudo firewall-cmd --zone=public --permanent --add-port=PORTA/tcp``` 
+```sudo firewall-cmd --reload``` 
+```sudo firewall-cmd --zone=public --list-ports```
