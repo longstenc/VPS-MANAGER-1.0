@@ -23,7 +23,11 @@ __Alterar senha Root__
 __Abrir Portas Servidor Oracle__
 
 ```sudo apt-get update```
+
 ```sudo apt install firewalld```
+
 ```sudo firewall-cmd --zone=public --permanent --add-port=PORTA/tcp``` 
+
 ```sudo firewall-cmd --reload``` 
+
 ```sudo firewall-cmd --zone=public --list-ports```
